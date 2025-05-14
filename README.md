@@ -69,3 +69,101 @@ Os usuarios devem confia em um sistema  complexo. Ex Uma ferramenta financeira b
 Responsabilidade 
 
 Quem é responsável pelas decisões baseadas na IA ? Ex: Uma pessoa inocente é condenda por um crime com base em provas de reconhecimento facial.
+
+
+
+# 📄 Relatório Técnico: Organização e Pesquisa de Documentos com Azure Cognitive Search
+
+## 1. Introdução
+
+Este relatório descreve o processo de organização e pesquisa de documentos por meio da ingestão de dados e indexação utilizando o **Azure Cognitive Search**, uma solução de busca como serviço (Search-as-a-Service) da Microsoft. O objetivo é demonstrar como essa ferramenta pode ser utilizada para transformar grandes volumes de documentos não estruturados em informações pesquisáveis e acessíveis.
+
+## 2. Visão Geral do Azure Cognitive Search
+
+O **Azure Cognitive Search** é uma plataforma de busca baseada em nuvem que permite:
+
+- Indexar dados estruturados e não estruturados.
+- Aplicar habilidades cognitivas para extração de informações.
+- Realizar buscas textuais com alta performance.
+- Integrar com outras soluções do Azure, como Blob Storage, Cosmos DB, SQL Database, etc.
+
+## 3. Etapas do Processo
+
+### 3.1 Ingestão de Dados
+
+A ingestão é o processo de entrada dos dados na plataforma. Pode ser feita a partir de:
+
+- **Azure Blob Storage** (PDFs, DOCX, imagens, etc.)
+- **SQL Database**
+- **Cosmos DB**
+- **APIs externas**
+
+#### Ferramentas e Técnicas:
+- **Data Source**: Define a origem dos dados.
+- **Skillset**: Conjunto de habilidades cognitivas aplicadas aos dados (OCR, extração de entidades, tradução, etc.).
+- **Indexer**: Responsável por ler os dados, aplicar o skillset e alimentar o índice.
+
+---
+
+### 3.2 Habilidades Cognitivas (Skillsets)
+
+As habilidades cognitivas permitem enriquecer os dados durante a indexação. Exemplos:
+
+- **OCR (Reconhecimento Óptico de Caracteres)**: Extrai texto de imagens e PDFs.
+- **Extração de Entidades**: Identifica nomes, locais, datas, etc.
+- **Detecção de Idioma e Tradução**
+- **Análise de Sentimento e Classificação de Texto**
+
+---
+
+### 3.3 Indexação
+
+A indexação transforma os dados processados em um formato pesquisável. Componentes principais:
+
+- **Índice**: Estrutura que armazena os dados pesquisáveis.
+- **Campos**: Definem os atributos dos documentos (ex: título, conteúdo, data).
+- **Analisadores**: Tokenizam e normalizam o texto para busca eficiente.
+
+---
+
+### 3.4 Pesquisa
+
+Após a indexação, os dados podem ser consultados por meio de:
+
+- **API RESTful**
+- **SDKs (.NET, Python, Java)**
+- **Azure Portal**
+- **Integração com aplicativos web (ex: Power BI, aplicativos personalizados)**
+
+Funcionalidades de pesquisa incluem:
+
+- Busca por texto completo
+- Filtros e facetas
+- Sugestões automáticas
+- Destaque de trechos relevantes
+
+---
+
+## 4. Casos de Uso
+
+- **Pesquisa Jurídica**: Indexação de processos e jurisprudências.
+- **Gestão de Documentos Corporativos**: Busca em arquivos internos.
+- **Análise de Currículos**: Extração de dados de candidatos.
+- **Digitalização de Arquivos Físicos**: OCR e organização de documentos escaneados.
+
+---
+
+## 5. Benefícios
+
+- Redução de tempo na busca por informações.
+- Aumento da produtividade.
+- Enriquecimento automático de dados.
+- Escalabilidade e integração com outras soluções Azure.
+
+---
+
+## 6. Considerações Finais
+
+O Azure Cognitive Search é uma solução poderosa para empresas que lidam com grandes volumes de documentos. Sua capacidade de aplicar inteligência artificial durante a ingestão e indexação permite transformar dados brutos em conhecimento acessível e útil.
+
+
